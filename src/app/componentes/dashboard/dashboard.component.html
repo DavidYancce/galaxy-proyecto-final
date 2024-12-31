@@ -1,1 +1,11 @@
-<p>dashboard works!</p>
+<div class="contenedor-bromas">
+  <h3 class="titulo">Broma:</h3>
+  <div *ngIf="broma?.type=='twopart'" class="broma">
+    <h2>{{broma?.setup}}</h2>
+    <h2>{{broma?.delivery}}</h2>
+  </div>
+  <div *ngIf="broma?.type=='single'" class="broma">
+    <h2>{{broma?.joke}}</h2>
+  </div>
+  <button (click)="generarBroma()" class="boton">Generar Otra Broma</button>
+</div>
